@@ -1,0 +1,60 @@
+---
+title: "CodeBook"
+author: "Ghora"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Source Code Data
+
+The data collected from the accelerometers from the Samsung Galaxy S smartphone. 
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+ 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+
+Data files used for the project
+
+train/X_train.txt
+train/y_train.txt
+train/subject_train.txt
+test/X_test.txt
+test/y_test.txt
+test/subject_test.txt
+features.txt
+activity_labels.txt
+
+Transformations
+
+Combined the respective data in training and test data sets corresponding to subject, label and dataset.
+Named the columns by transposing the names given in the document features.
+Merges the training and the test sets to create one complete data set.
+Extracts only the measurements on the mean and standard deviation for each measurement. 
+Replaced activity codes with descriptive activity names.
+Renamed variable names to be more descriptive.
+
+Clean Tidy dataset
+
+The final tidy dataset (Tidy.txt) contains:
+One row per subject and activity combination.
+One column for each mean and standard deviation measurement.
+180 rows (30 subjects × 6 activities)
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
